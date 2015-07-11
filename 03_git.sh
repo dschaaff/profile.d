@@ -1,3 +1,6 @@
+#------------------
+# add git to prompt
+#------------------
 source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
