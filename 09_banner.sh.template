@@ -1,0 +1,9 @@
+# This file should not contain much, as it should be what is output
+# to the terminal on an interactive shell launching.
+if command_exists cowsay ; then
+    cowsay "Hello, $USER"'!'
+else
+    echo "Hello, $USER"'!'
+fi
+
+echo ""
