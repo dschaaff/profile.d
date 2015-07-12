@@ -2,10 +2,10 @@
 # Bash Prompt Settings
 #-------
 case $PROMPT_STYLE in
-"hg_fancy")
+"git_fancy")
     export PS1='[\[\033[91;0;33m\]\u\[\033[91;0m\]@\[\033[91;0;32m\]\h\[\033[91;0m\]:\[\033[91;0;36m\]\w\[\033[91;0m\]] \[\033[00;35m\]$(__git_ps1)\[\033[00m\]\$ '
     ;;
-"hg_plain")
+"git_plain")
     export PS1='\h:\W $(__git_ps1)\$ '
     ;;
 "fancy")
