@@ -16,9 +16,9 @@
 # Bash options
 export CLICOLOR=1
 # Bash prompt style:
-#    Choices: "hg_fancy", "fancy", "hg_plain", "plain", "default"
+#    Choices: "git_fancy", "fancy", "git_plain", "plain", "default"
 #    To add a new one, edit 05_prompt.sh
-export PROMPT_STYLE="hg_fancy"
+export PROMPT_STYLE="git_fancy"
 
 # Editor stuff (make sure this is set to a working editor"
 export EDITOR="vim -f"
