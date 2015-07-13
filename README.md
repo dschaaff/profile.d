@@ -20,7 +20,7 @@ There are a couple options for using this, but here is how I do it. Put this in 
 
     # Include all the profile.d configs
     if [ -d $HOME/.dotfiles/profile.d ]; then
-      for profile_include in `ls -1 $HOME/.unix/profile.d/*.sh | sort`; do
+      for profile_include in `ls -1 $HOME/.dotfiles/profile.d/*.sh | sort`; do
         . $profile_include
       done
     fi
