@@ -21,7 +21,7 @@ export CLICOLOR=1
 export PROMPT_STYLE="git_fancy"
 
 # Editor stuff (make sure this is set to a working editor"
-export EDITOR="vim -f"
+export EDITOR="vim"
 #export SVN_EDITOR=$EDITOR
 
 # Mail

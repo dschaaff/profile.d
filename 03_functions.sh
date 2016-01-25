@@ -78,6 +78,13 @@ look_busy () {
     cat /dev/urandom | hexdump -C | grep --color=auto "ca fe"
 }
 
+# ...
+# Flush DNS cache
+flush_dns() {
+    sudo dscacheutil -flushcache
+    sudo killall -HUP mDNSResponder
+}
+	# ...
 #-------
 # End Functions
 #-------
