@@ -1,8 +1,8 @@
 #-------
 # Functions
 #-------
-log () { 
-  echo -e "["`date '+%Y/%m/%d %T'`"]:" $1 
+log () {
+  echo -e "["`date '+%Y/%m/%d %T'`"]:" $1
 }
 
 log_warn () {
@@ -83,6 +83,30 @@ look_busy () {
 flush_dns() {
     sudo dscacheutil -flushcache
     sudo killall -HUP mDNSResponder
+}
+# Juniper console
+if command_exists screen ; then
+    juniper_console() {
+        if [ -e /dev/tty.usbserial ]; then
+            screen /dev/tty.usbserial
+        else
+            log_error "No USB TTY detected"
+        fi
+    }
+fi
+
+# powerline
+function _update_ps1() {
+ PS1="$(~/powerline-shell.py $? 2> /dev/null)"
+ }
+
+if [ "$TERM" != "linux" ]; then
+  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+
+# Figure out what's got open files... takes a while to run
+too_many_open_files() {
+  lsof | awk '{ print $1 }' | sort | uniq -c | sort -n
 }
 	# ...
 #-------
