@@ -96,13 +96,13 @@ if command_exists screen ; then
 fi
 
 # powerline
-function _update_ps1() {
- PS1="$(~/powerline-shell.py $? 2> /dev/null)"
- }
+#function _update_ps1() {
+# PS1="$(~/.dotfiles/powerline-shell.py $? 2> /dev/null)"
+# }
 
-if [ "$TERM" != "linux" ]; then
-  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+#if [ "$TERM" != "linux" ]; then
+#  PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+#fi
 
 # Figure out what's got open files... takes a while to run
 too_many_open_files() {
