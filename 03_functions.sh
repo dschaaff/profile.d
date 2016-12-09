@@ -108,7 +108,22 @@ fi
 too_many_open_files() {
   lsof | awk '{ print $1 }' | sort | uniq -c | sort -n
 }
-	# ...
+
+# Switch between Puppet test environments
+# Puppet 3
+p3rspec () {
+  rvm use ruby-2.1.8
+  rvm gemset use puppet3
+  export PUPPET_GEM_VERSION=3.8.7
+}
+
+# Puppet 4.7
+p47rspec () {
+  rvm use ruby-2.1.8
+  rvm gemset use puppet4
+  export PUPPET_GEM_VERSION=4.7
+}
+# ...
 #-------
 # End Functions
 #-------
