@@ -58,7 +58,7 @@ public_ip () {
     fi
 }
 
- Regular Date to Unix Timestamp
+# Regular Date to Unix Timestamp
 if command_exists ruby ; then
     date2unix() {
         local raw_date="$@"
@@ -103,18 +103,11 @@ too_many_open_files() {
 }
 
 # Switch between Puppet test environments
-# Puppet 3
-p3rspec () {
-  rvm use ruby-2.1.8
-  rvm gemset use puppet3
-  export PUPPET_GEM_VERSION=3.8.7
-}
-
 # Puppet 4.7
 p47rspec () {
   rvm use ruby-2.1.8
   rvm gemset use puppet4
-  export PUPPET_GEM_VERSION=4.7
+  export PUPPET_GEM_VERSION=4.8
 }
 # ...
 #-------

@@ -1,7 +1,5 @@
 #### PATH changes go here
 #export PATH=/Applications/terraform_0:$PATH
-# Unix Home bin
-#export PATH=~/.unix/bin:$PATH
 
 # Brew stuff
 #export PATH=/usr/local/sbin:/usr/local/bin:$PATH
