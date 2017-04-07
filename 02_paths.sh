@@ -11,4 +11,4 @@
 #export PATH=$GROOVY_HOME/bin:$PATH
 
 # Sublime Text
-export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/:$PATH
+export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
