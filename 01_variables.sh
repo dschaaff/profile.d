@@ -3,6 +3,8 @@
 #-------
 
 #UNIX_HOME=~/.dotfiles
+#GIMBAL_HOME
+export GIMBAL_HOME=$HOME/development/gimbal
 
 # Ruby / JRuby here
 #JRUBY_HOME=$UNIX_HOME/apps/jruby
@@ -11,6 +13,7 @@
 #GROOVY_HOME=$UNIX_HOME/apps/groovy
 
 # JAVA Options
+export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_OPTS="-Xms64m -Xmx256m -server -Djava.awt.headless=true"
 
 # Bash options

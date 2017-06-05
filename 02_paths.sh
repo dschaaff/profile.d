@@ -2,7 +2,7 @@
 #export PATH=/Applications/terraform_0:$PATH
 
 # Brew stuff
-#export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
 # JRuby ($JRUBY_HOME *must* be set)
 #export PATH=$PATH:$JRUBY_HOME/bin
