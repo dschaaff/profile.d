@@ -4,6 +4,9 @@
 # Brew stuff
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
+# Android
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+
 # JRuby ($JRUBY_HOME *must* be set)
 #export PATH=$PATH:$JRUBY_HOME/bin
 

@@ -5,7 +5,7 @@
 #UNIX_HOME=~/.dotfiles
 #GIMBAL_HOME
 export GIMBAL_HOME=$HOME/development/gimbal
-
+export ANDROID_HOME=$HOME/Library/Android/sdk
 # Ruby / JRuby here
 #JRUBY_HOME=$UNIX_HOME/apps/jruby
 
