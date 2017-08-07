@@ -28,15 +28,6 @@ command_exists () {
     type "$1" &> /dev/null ;
 }
 
-# Setup a friendly way to wget files
-#if command_exists wget ; then
-#    wfetch () {
-#        local from=$1
-#        local to=$2
-#        wget -U "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.7; en-US; rv:1.9.0.5) Gecko/2008120121 Firefox/3.0.5" -O "$to" "$from" || return 1
-#    }
-#fi
-
 # convert dmgs to isos
 dmg2iso () {
     dmg="$1"
@@ -102,12 +93,13 @@ too_many_open_files() {
   lsof | awk '{ print $1 }' | sort | uniq -c | sort -n
 }
 
-# Switch between Puppet test environments
-# Puppet 4.7
-p47rspec () {
-  rvm use ruby-2.1.8
-  rvm gemset use puppet4
-  export PUPPET_GEM_VERSION=4.8
+getec2ip() {
+    aws ec2 describe-instances --instance-ids $1 | jq [.Reservations[0].Instances[0].PrivateIpAddress] | jq --raw-output .[]
+}
+
+assh() {
+    host=$(getec2ip ${1})
+    ssh dschaaff@${host}
 }
 # ...
 #-------
