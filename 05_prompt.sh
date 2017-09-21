@@ -1,9 +1,14 @@
 #-------
 # Bash Prompt Settings
 #-------
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
 case $PROMPT_STYLE in
 "git_fancy")
-    export PS1='[\[\033[91;0;33m\]\u\[\033[91;0m\]@\[\033[91;0;32m\]\h\[\033[91;0m\]:\[\033[91;0;36m\]\w\[\033[91;0m\]] \[\033[00;35m\]$(__git_ps1)\[\033[00m\]\$ '
+    export PS1="[\[${yellow}\u\[${NC}\]@\[${green}\]\h\[${NC}\]:\[${blue}\]\w\[${NC}\]] \[\033[00;35m\]\$(__git_ps1)\[\033[00m\]\$ "
     ;;
 "git_plain")
     export PS1='\h:\W $(__git_ps1)\$ '
