@@ -4,7 +4,7 @@
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/local/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
 case $PROMPT_STYLE in
 "git_fancy")
