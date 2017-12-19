@@ -6,7 +6,8 @@
 
 # Ruby / JRuby here
 #JRUBY_HOME=$UNIX_HOME/apps/jruby
-
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 # Groovy setup
 #GROOVY_HOME=$UNIX_HOME/apps/groovy
 
