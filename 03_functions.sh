@@ -101,6 +101,15 @@ assh() {
     host=$(getec2ip ${1})
     ssh dschaaff@${host}
 }
+
+# powerline-go
+function _update_ps1() {
+    PS1="$(~/go/bin/powerline-go -modules "venv,user,ssh,cwd,perms,git,hg,jobs,exit,root" -error $?)"
+}
+
+if [ "$TERM" != "linux" ]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
 # ...
 #-------
 # End Functions

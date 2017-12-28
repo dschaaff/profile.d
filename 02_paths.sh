@@ -4,9 +4,15 @@
 # Brew stuff
 export PATH=/usr/local/sbin:/usr/local/bin:$PATH
 
-# Python
+# go
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
 
+# Python
 export PATH=/usr/local/opt/python/libexec/bin:$PATH
+
 # Android
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
@@ -15,8 +21,6 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 # Groovy ($GROOVY_HOME *must* be set)
 #export PATH=$GROOVY_HOME/bin:$PATH
-
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
 # Sublime Text
 export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
