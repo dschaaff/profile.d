@@ -5,11 +5,7 @@
 #UNIX_HOME=~/.dotfiles
 
 # Ruby / JRuby here
-#JRUBY_HOME=$UNIX_HOME/apps/jruby
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-# Groovy setup
-#GROOVY_HOME=$UNIX_HOME/apps/groovy
+eval "$(rbenv init -)"
 
 # JAVA Options
 export JAVA_HOME=$(/usr/libexec/java_home)
