@@ -99,7 +99,7 @@ getec2ip() {
 
 assh() {
     host=$(getec2ip ${1})
-    ssh dschaaff@${host}
+    ssh ${host}
 }
 
 # powerline-go

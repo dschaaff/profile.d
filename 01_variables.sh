@@ -5,8 +5,9 @@
 #UNIX_HOME=~/.dotfiles
 
 # Ruby / JRuby here
-eval "$(rbenv init -)"
-
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.4.3
 # JAVA Options
 export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_OPTS="-Xms64m -Xmx256m -server -Djava.awt.headless=true"
