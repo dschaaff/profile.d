@@ -23,6 +23,8 @@ alias grep='grep --color=auto'
 
 #
 alias ll='ls -l'
+# nvim > vim
+alias vim='nvim'
 #-------
 # End Aliases
 #-------

@@ -21,20 +21,9 @@ export PROMPT_STYLE="git_fancy"
 
 # Editor stuff (make sure this is set to a working editor"
 export EDITOR="vim"
-#export SVN_EDITOR=$EDITOR
 
-# Mail
-#unset MAILCHECK
-#if [ -d $HOME/Maildir/ ]; then
-#    export MAIL=$HOME/Maildir/
-#    export MAILPATH=$HOME/Maildir/
-#    export MAILDIR=$HOME/Maildir/
-#elif [ -f /var/mail/$USER ]; then
-#    export MAIL="/var/mail/$USER"
-#fi
-
-# Video stuff
-#export VIDEO_FORMAT=NTSC
+# gpg
+export GPG_TTY="tty"
 
 #-------
 # End Variables

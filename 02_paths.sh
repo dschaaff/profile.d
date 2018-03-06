@@ -11,7 +11,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 # Python
-export PATH=/usr/local/opt/python/libexec/bin:$PATH
+#export PATH=/usr/local/opt/python3/libexec/bin:$PATH
 
 # Android
 export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
