@@ -25,6 +25,7 @@ export EDITOR="vim"
 # gpg
 export GPG_TTY="tty"
 
+export AWS_DEFAULT_REGION=us-east-1
 #-------
 # End Variables
 #-------
