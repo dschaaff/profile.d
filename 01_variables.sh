@@ -6,8 +6,8 @@
 
 # Ruby / JRuby here
 source /usr/local/share/chruby/chruby.sh
+chruby ruby-2.5.1
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.4.3
 # JAVA Options
 export JAVA_HOME=$(/usr/libexec/java_home)
 #export JAVA_OPTS="-Xms64m -Xmx256m -server -Djava.awt.headless=true"
@@ -26,6 +26,9 @@ export EDITOR="vim"
 export GPG_TTY="tty"
 
 export AWS_DEFAULT_REGION=us-east-1
+
+#kubernetes
+export KUBECONFIG=$KUBECONFIG:~/.kube/config-production
 #-------
 # End Variables
 #-------
