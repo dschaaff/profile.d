@@ -5,7 +5,7 @@
 
 case $PROMPT_STYLE in
 "git_fancy")
-    export PS1="[\[${yellow}\u\[${NC}\]@\[${green}\]\h\[${NC}\]:\[${blue}\]\w\[${NC}\]] \[\033[00;35m\]\$(__git_ps1)\[\033[00m\]\$ "
+    export PS1="[\[\[${blue}\]\w\[${NC}\]] \[\033[00;35m\]\$(__git_ps1)\[\033[00m\]\$ "
     ;;
 "git_plain")
     export PS1='\h:\W $(__git_ps1)\$ '

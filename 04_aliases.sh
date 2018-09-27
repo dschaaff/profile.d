@@ -1,3 +1,4 @@
+#!/bin/bash
 #-------
 # Bash Aliases
 #-------
@@ -25,6 +26,7 @@ alias grep='grep --color=auto'
 alias ll='ls -l'
 # nvim > vim
 alias vim='nvim'
+alias vi='nvim'
 #-------
 # End Aliases
 #-------

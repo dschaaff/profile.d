@@ -27,5 +27,7 @@ export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/usr/local/Cellar/mongodb@3.4/3.4.10/bin
 # Sublime Text
 export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH
+# Sublime Merge
+export PATH=/Applications/Sublime\ Merge.app/Contents/SharedSupport/bin:$PATH
 # home directory bin path
 export PATH=$HOME/bin:$PATH
