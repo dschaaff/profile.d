@@ -2,7 +2,7 @@
 #export PATH=/Applications/terraform_0:$PATH
 
 # Brew stuff
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 # go
 export GOPATH=$HOME/go
