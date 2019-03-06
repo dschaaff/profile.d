@@ -22,3 +22,4 @@
 
 # VPN
 #complete -F _vpn_complete_ vpn
+source <(kubectl completion bash)

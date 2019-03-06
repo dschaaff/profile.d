@@ -104,7 +104,7 @@ assh() {
 
 # powerline-go
 function _update_ps1() {
-    PS1="$(~/go/bin/powerline-go -modules "venv,ssh,aws,cwd,perms,docker,git,jobs,exit" -cwd-max-depth 4 -error $?)"
+    PS1="$(~/go/bin/powerline-go -modules "venv,ssh,aws,kube,cwd,perms,docker,git,jobs,exit" -cwd-max-depth 4 -error $?)"
 }
 
 if [ "$TERM" != "linux" ]; then
