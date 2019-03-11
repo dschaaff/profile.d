@@ -30,6 +30,9 @@ export AWS_DEFAULT_REGION=us-east-1
 # node version manager
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
+
+# kubectl
+export KUBECONFIG=$HOME/.kube/config-eks-dev:$HOME/.kube/config-old-dev
 #-------
 # End Variables
 #-------
