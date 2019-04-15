@@ -32,7 +32,7 @@ export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
 
 # kubectl
-export KUBECONFIG=$HOME/.kube/config-eks-dev:$HOME/.kube/config-old-dev
+export KUBECONFIG=$HOME/.kube/config-eks-dev:$HOME/.kube/config-old-dev:$HOME/.kube/config-docker-desktop
 #-------
 # End Variables
 #-------
