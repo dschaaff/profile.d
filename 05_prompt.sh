@@ -23,3 +23,10 @@ esac
 #-------
 # End Prompt Settings
 #-------
+# if [ -f "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+#   __GIT_PROMPT_DIR=$(brew --prefix)/opt/bash-git-prompt/share
+#   GIT_PROMPT_ONLY_IN_REPO=1
+#   source "$(brew --prefix)/opt/bash-git-prompt/share/gitprompt.sh"
+# fi
+# source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+#   PS1='$(kube_ps1)'$PS1
