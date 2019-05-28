@@ -13,13 +13,12 @@ Create a place to store your profile.d stuff. I use `$HOME/.dotfiles`. :
 
 Clone my repo:
 
-    cd $HOME/.dotfiles
-    git clone https://github.com/dschaaff/dotfiles.git
+    git clone https://github.com/dschaaff/dotfiles.git ~/.profile.d
 
 There are a couple options for using this, but here is how I do it. Put this in your `$HOME/.profile` (which might not exist):
 
     # Include all the profile.d configs
-    if [ -d $HOME/.dotfiles/profile.d ]; then
+    if [ -d $HOME/.profile.d ]; then
       for profile_include in `ls -1 $HOME/.dotfiles/profile.d/*.sh | sort`; do
         . $profile_include
       done

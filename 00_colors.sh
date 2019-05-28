@@ -10,8 +10,9 @@ cyan='\033[91;0;36m'
 CYAN='\033[91;1;36m'
 yellow='\033[91;0;33m'
 YELLOW='\033[91;1;33m'
+purple='\033[91;0;35m'
 NC='\033[91;0m' # No Color
-
+bold=$(tput bold)
 #--------
 # Color stuff for scripting (not for PS1)
 #--------

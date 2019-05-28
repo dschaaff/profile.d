@@ -103,14 +103,14 @@ assh() {
 }
 
 # powerline-go
-function _update_ps1() {
-    PS1="$(~/go/bin/powerline-go -modules "venv,ssh,aws,kube,cwd,perms,git,jobs,exit,root" \
-     -path-aliases "~/development=dev" -max-width 75 -cwd-max-depth 4 -error $?)"
-}
+# function _update_ps1() {
+#     PS1="$(~/go/bin/powerline-go -modules "venv,ssh,aws,kube,cwd,perms,git,jobs,exit,root" \
+#      -path-aliases "~/development=dev" -max-width 75 -cwd-max-depth 4 -error $?)"
+# }
 
-if [ "$TERM" != "linux" ]; then
-    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-fi
+# if [ "$TERM" != "linux" ]; then
+#     PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+# fi
 
 # ...
 #-------
