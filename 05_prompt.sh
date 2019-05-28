@@ -7,7 +7,6 @@ kube_prompt()
    k8s_symbol=$'\xE2\x8E\x88 '
    kubectl_prompt="(${blue}${k8s_symbol}${red}${kubectl_current_context}${NC}:${cyan}${kubectl_current_ns}${NC})"
    echo $kubectl_prompt
-   # echo "foo bar"
 }
 function __prompt_command(){
 
@@ -16,14 +15,15 @@ function __prompt_command(){
   if [[ "${PROMPT_LAST_COMMAND_STATE:-0}" = 0 ]]; then
     LAST_COMMAND_INDICATOR="${green} ✔";
   else
-    LAST_COMMAND_INDICATOR="${red}✘ $ex${NC}";
+    LAST_COMMAND_INDICATOR="${red} ✘ $ex${NC}";
   fi
-  GIT_PS1_SHOWDIRTYSTATE=true
-  GIT_PS1_SHOWCOLORHINTS=true
-  PS1="${LAST_COMMAND_INDICATOR} [\[\[${yellow}\]\W\[${NC}\]]"
+  export GIT_PS1_SHOWDIRTYSTATE=true
+  export GIT_PS1_SHOWCOLORHINTS=true
+  export GIT_PS1_UNTRACKEDFILES=true
+  PS1="┌─${LAST_COMMAND_INDICATOR} [\[\[${yellow}\]\W\[${NC}\]]"
   PS1="$PS1 $(kube_prompt)"
-  PS1="$PS1\$(__git_ps1)"
-  PS1="$PS1\n\[\033[1;34m\]$(date +%H:%M) \$ \[\033[0;0m\]"
+  PS1="$PS1${red}\$(__git_ps1)${NC}"
+  PS1="$PS1\n└─▶ \[\033[1;34m\]$(date +%H:%M) \$ \[\033[0;0m\]"
 }
 
 #-------
@@ -31,9 +31,10 @@ function __prompt_command(){
 #-------
 case $PROMPT_STYLE in
 "git_fancy")
+    export GIT_PS1_SHOWDIRTYSTATE=true
+    export GIT_PS1_SHOWCOLORHINTS=true
+    export GIT_PS1_UNTRACKEDFILES=true
     export PROMPT_COMMAND='__prompt_command'
-    # PS1="${LAST_COMMAND_INDICATOR} [\[\[${yellow}\]\W\[${NC}\]]\[\033[00;35m\]\$(__git_ps1)\[\033[00m\] \[\033[1;34m\]$(date +%H:%M) \$ \[\033[0;0m\]$reset"
-    # export "\[\033[0;32m\]✔ \[\033[0;33m\]\w\[\033[0;0m\] \n\[\033[1;34m\]$(date +%H:%M)\[\033[0;0m\]"
     ;;
 "git_plain")
     export PS1='\h:\W $(__git_ps1)\$ '
