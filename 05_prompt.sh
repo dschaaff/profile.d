@@ -1,5 +1,4 @@
 #!/bin/bash
-source /usr/local/Cellar/git/2.21.0/etc/bash_completion.d/git-prompt.sh
 kube_prompt()
 {
    kubectl_current_context=$(kubectl config current-context)
@@ -20,21 +19,28 @@ function __prompt_command(){
   export GIT_PS1_SHOWDIRTYSTATE=true
   export GIT_PS1_SHOWCOLORHINTS=true
   export GIT_PS1_UNTRACKEDFILES=true
-  PS1="┌─${LAST_COMMAND_INDICATOR} [\[\[${yellow}\]\W\[${NC}\]]"
+  PS1="┌─${LAST_COMMAND_INDICATOR} [\[\[${yellow}\]\w\[${NC}\]]"
   PS1="$PS1 $(kube_prompt)"
   PS1="$PS1${red}\$(__git_ps1)${NC}"
   PS1="$PS1\n└─▶ \[\033[1;34m\]$(date +%H:%M) \$ \[\033[0;0m\]"
 }
-
+# powerline-go
+function _update_ps1() {
+    PS1="$(~/go/bin/powerline-go -theme "default" -modules "aws,kube,newline,venv,ssh,,cwd,perms,git,jobs,exit,root" \
+     -path-aliases "~/development=dev" -max-width 75 -cwd-max-depth 3 -error $?)"
+}
 #-------
 # Bash Prompt Settings
 #-------
+# powerline-daemon -q
+# POWERLINE_BASH_CONTINUATION=1
+# POWERLINE_BASH_SELECT=1
+# . /usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 case $PROMPT_STYLE in
 "git_fancy")
-    export GIT_PS1_SHOWDIRTYSTATE=true
-    export GIT_PS1_SHOWCOLORHINTS=true
-    export GIT_PS1_UNTRACKEDFILES=true
-    export PROMPT_COMMAND='__prompt_command'
+    if [ "$TERM" != "linux" ]; then
+      PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+    fi
     ;;
 "git_plain")
     export PS1='\h:\W $(__git_ps1)\$ '
