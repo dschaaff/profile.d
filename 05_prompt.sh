@@ -26,8 +26,9 @@ function __prompt_command(){
 }
 # powerline-go
 function _update_ps1() {
-    PS1="$(~/go/bin/powerline-go -theme "default" -modules "aws,kube,newline,venv,ssh,,cwd,perms,git,jobs,exit,root" \
-     -path-aliases "~/development=dev" -max-width 75 -cwd-max-depth 3 -error $?)"
+    PS1="$(~/go/bin/powerline-go -theme "default" -modules "aws,kube,newline,venv,ssh,cwd,perms,git,jobs,exit,root" \
+    -shell bash -max-width 75 -cwd-max-depth 3 -error $? \
+    -theme ~/.profile.d/powerline-theme/default.json)"
 }
 #-------
 # Bash Prompt Settings
