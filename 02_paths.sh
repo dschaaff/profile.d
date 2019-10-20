@@ -3,6 +3,7 @@
 
 # Brew stuff
 export PATH=$HOME/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=$HOME/bin/kui/bin:$PATH
 
 # go
 export GOPATH=$HOME/go

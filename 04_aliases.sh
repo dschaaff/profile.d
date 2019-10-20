@@ -11,7 +11,15 @@
 
 # Add some colors to grep
 alias grep='grep --color=auto'
-
+# terraform switcher
+cdtfswitch(){
+  builtin cd "$@";
+  cdir=$PWD;
+  if [ -f "$cdir/.tfswitchrc" ]; then
+    tfswitch
+  fi
+}
+alias cd='cdtfswitch'
 #
 alias ll='ls -l'
 alias vim='nvim'
