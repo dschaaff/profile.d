@@ -56,7 +56,7 @@ function prompt_command {
   fi
 
   PreGitPS1="${kubectl_prompt}[${YELLOW}\[\w\]${DEFAULT}]"
-  PostGitPS1="\n${BOLD}└─▶ $(date +%H:%M) ${AWS_PROMPT}$LAST_COMMAND_INDICATOR \$ "
+  PostGitPS1="\n${BOLD}─▶ $(date +%H:%M) ${AWS_PROMPT}$LAST_COMMAND_INDICATOR ${BOLD}\$${DEFAULT} "
   
   export GIT_PS1_SHOWCOLORHINTS=1
   export GIT_PS1_SHOWDIRTYSTATE=1           # '*'=unstaged, '+'=staged
