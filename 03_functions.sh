@@ -18,10 +18,10 @@ log_critical () {
 }
 
 # This is run whenever Ctrl+c is captured
-ctrl_c() {
-    log_critical "** Script aborted by user! ***"
-    exit 1
-}
+# ctrl_c() {
+#     log_critical "** Script aborted by user! ***"
+#     exit 1
+# }
 
 # Tests if a command is available within the PATH
 command_exists () {

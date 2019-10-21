@@ -50,7 +50,7 @@ function prompt_command {
     kubectl_current_context=$(kubectl config current-context)
     kubectl_current_ns=$(kubectl config view --minify --output 'jsonpath={..namespace}')
     k8s_symbol=$'\xE2\x8E\x88 '
-    kubectl_prompt="[${BLUE} ${k8s_symbol}${DEFAULT}|${purple}${kubectl_current_context}${DEFAULT}:${txtblue}${kubectl_current_ns}${DEFAULT}]\n"
+    kubectl_prompt="[${BLUE}${k8s_symbol}${DEFAULT}|${purple}${kubectl_current_context}${DEFAULT}:${txtblue}${kubectl_current_ns}${DEFAULT}]\n"
   else
     kubectl_prompt=""
   fi
