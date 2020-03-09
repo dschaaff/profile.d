@@ -19,11 +19,13 @@ export CLICOLOR=1
 export EDITOR="nvim"
 
 # gpg
-export GPG_TTY="tty"
+export GPG_TTY=$(tty)
 
 # node version manager
 export NVM_DIR="$HOME/.nvm"
   . "/usr/local/opt/nvm/nvm.sh"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #-------
 # End Variables
