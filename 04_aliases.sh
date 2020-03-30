@@ -34,6 +34,7 @@ alias consul-prd='CONSUL_HTTP_ADDR=https://consul-ui.ops.cordial.io consul'
 alias vault-dev='VAULT_ADDR=https://vault.dev.cordialdev.com:8200 VAULT_CACERT=~/.vault-cli/dev/ca.crt vault'
 alias vault-stg='VAULT_ADDR=https://vault.stg.cordialdev.com:8200 VAULT_CACERT=~/.vault-cli/stg/ca.crt vault'
 alias vault-prd='VAULT_ADDR=https://vault.ops.cordial.io:8200 VAULT_CACERT=~/.vault-cli/prd/ca.crt vault'
+
 #-------
 # End Aliases
 #-------

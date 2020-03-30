@@ -72,8 +72,7 @@ look_busy () {
 # ...
 # Flush DNS cache
 flush_dns() {
-    sudo dscacheutil -flushcache
-    sudo killall -HUP mDNSResponder
+    sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder
 }
 # Juniper console
 if command_exists screen ; then
